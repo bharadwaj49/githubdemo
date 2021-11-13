@@ -12,5 +12,6 @@ jobs:
 ##########run a command or use actions######
   my_second_job:
     name: My second Job
+    runs-on: ubuntu-latest
     steps:
       - run: echo "bye world"
