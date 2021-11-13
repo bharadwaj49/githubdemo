@@ -1,0 +1,11 @@
+name: using env vars
+on: issues
+env:
+  VAR1: BRAD
+jobs:
+  job1:
+    name: this is job1
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello $VAR1"
+  
