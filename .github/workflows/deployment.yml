@@ -10,3 +10,7 @@ jobs:
     steps:
       - run: echo "hello world"
 ##########run a command or use actions######
+  my_second_job:
+    name: My second Job
+    steps:
+      - run: echo "bye world"
