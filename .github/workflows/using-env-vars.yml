@@ -6,6 +6,11 @@ jobs:
   job1:
     name: this is job1
     runs-on: ubuntu-latest
+    env:
+      VAR2: BRAD2
     steps:
-      - run: echo "hello $VAR1"
-  
+      - run: echo "This is global variable $VAR1"
+      - run: echo "This is Job variable $VAR2"
+      - run: echo "This is run/step variable $VAR3"
+        env:
+          VAR3: BRAD3  
