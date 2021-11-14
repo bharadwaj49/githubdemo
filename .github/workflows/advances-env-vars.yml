@@ -16,6 +16,6 @@ jobs:
     name: this is job1
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is global variable ${{github.events.input.name}}"
-      - run: echo "This is Job variable ${{github.event.input.address}}"
+      - run: echo "This is global variable ${{secrets.NAME}}"
+      - run: echo "This is Job variable ${{secrets.NAME}}"
       - run: echo "This is run/step variable ${{env.VAR1}}-3"
