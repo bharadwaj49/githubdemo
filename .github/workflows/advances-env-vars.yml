@@ -1,21 +1,11 @@
 name: using env vars
-on: 
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'The name of the variable'
-        required: true
-        default: 'this is workflow variable'
-      address:
-        description: 'The address of the user'
-        required: true
-        default: '24'
+on: workflow_dispatch
 
 jobs:
   job1:
     name: this is job1
     runs-on: ubuntu-latest
     steps:
-      - run: echo "This is global variable ${{secrets.NAME}}"
-      - run: echo "This is Job variable ${{secrets.NAME}}"
+      - run: echo "Hello ${{secrets.NAME}}"
+      - run: echo "Bye ${{secrets.NAME}}"
       - run: echo "This is run/step variable ${{env.VAR1}}-3"
